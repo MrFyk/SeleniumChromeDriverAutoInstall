@@ -7,7 +7,6 @@ import os
 from ast import literal_eval
 
 
-
 def get_chrome_info():
     # 查看操作系统名称
     system_name = platform.system()
@@ -92,7 +91,7 @@ def driver_download_unzip(system_name, link):
         pass
 
 
-def main():
+def install():
     sys_name, machine, version_num = get_chrome_info()
     # print(sys_name, machine, version_num)
     download_link = get_driver_download_link(sys_name, machine, version_num)
@@ -110,5 +109,5 @@ def main():
 
 
 if __name__ == '__main__':
-    result = main()
-    print(result)
+    driver_path = install()
+    print(driver_path)
